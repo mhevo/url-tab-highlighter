@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "URL Tab Highlighter",
+  "version": "1.0.0",
+  "description": "Markiert Seiten mit einem farbigen Banner basierend auf einem URL-Muster.",
+  "permissions": [
+    "storage"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "options_page": "options.html",
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "contentScript.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}
